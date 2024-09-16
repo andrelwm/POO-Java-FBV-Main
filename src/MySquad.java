@@ -19,7 +19,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class MySquad extends JFrame{
 
-    //Declaração de variáveis
+    
+
     final private Font fontePrincipal = new Font("Arial", Font.BOLD, 18);
     final private Color textoPrincipal = new Color(255, 255, 255);
     final private Color fundoPrincipal = new Color(25, 25, 112);
@@ -1059,7 +1060,7 @@ public class MySquad extends JFrame{
         try {
             
             Path inputFile = Paths.get(caminhoArquivo);
-            String caminho = "C:\\Users\\andre.melo\\Downloads\\POO-Java-FBV-main\\src\\images\\usuarios\\";
+            String caminho = "C:\\Users\\simpl\\OneDrive\\Desktop\\codigos\\POO-Java-FBV\\src\\images\\usuarios\\";
             Path outputFile = Paths.get(caminho + nick + ".jpg");
 
             Files.copy(inputFile, outputFile, StandardCopyOption.REPLACE_EXISTING);
@@ -1067,7 +1068,7 @@ public class MySquad extends JFrame{
          } catch (IOException erro) {
             JOptionPane.showMessageDialog(null, "MySquad.enviarImagem: " + erro, "ERRO!", 0);
          } catch (NullPointerException erro) {
-            caminhoArquivo = "C:\\Users\\andre.melo\\Downloads\\POO-Java-FBV-main\\src\\images\\usuarios\\" + nick + ".jpg";
+            caminhoArquivo = "C:\\Users\\simpl\\OneDrive\\Desktop\\codigos\\POO-Java-FBV\\src\\images\\usuarios\\" + nick + ".jpg";
          }
 
     }
@@ -1076,7 +1077,7 @@ public class MySquad extends JFrame{
 
         try {
 
-            String caminho = "C:\\Users\\andre.melo\\Downloads\\POO-Java-FBV-main\\src\\images\\usuarios\\" + nick + ".jpg";
+            String caminho = "C:\\Users\\simpl\\OneDrive\\Desktop\\codigos\\POO-Java-FBV\\src\\images\\usuarios\\" + nick + ".jpg";
             imgUrl = mostrarDados().get(5);
             File url = new File(imgUrl);
             imagem = ImageIO.read(url);
@@ -1188,7 +1189,7 @@ public class MySquad extends JFrame{
 
             while(rs.next()) {
 
-                listaDados.add(rs.getString(1).toUpperCase());
+                listaDados.add(rs.getString(1).toUpperCase());//usuario//
                 listaDados.add(rs.getString(2));
                 listaDados.add(rs.getString(3));
                 listaDados.add(rs.getString(4));
